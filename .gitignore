@@ -1,6 +1,9 @@
 /In-Memoria
 node_modules
 .idea
+.package-lock.json
+.pnpm-lock.yml
+.yarn.lock
 
 # In Memoria
 in-memoria.db
