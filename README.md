@@ -15,6 +15,48 @@ This plugin integrates with [In-Memoria](https://github.com/pi22by7/In-Memoria) 
 - **Provides contextual recommendations** based on your project's specific patterns
 - **Builds persistent intelligence** that improves AI responses over time
 
+## Quick Start
+
+Install the plugin globally:
+
+```bash
+npm install -g opencode-plugin-in-memoria@latest
+```
+
+Then configure your `.opencode/opencode.json`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "description": "My Project with In-Memoria",
+  "mcp": {
+    "in-memoria": {
+      "type": "local",
+      "command": ["npx", "in-memoria", "server"],
+      "description": "In-Memoria persistent intelligence server"
+    }
+  },
+  "plugin": [
+    "opencode-in-memoria-plugin"
+  ]
+}
+```
+
+That's it! The plugin works out-of-the-box with sensible defaults and will automatically learn your codebase.
+
+### Optional Configuration
+
+To customize behavior, create `.opencode/inmemoria.json`:
+
+```json
+{
+  "autoLearn": true,
+  "contextInjection": true,
+  "insightCapture": true,
+  "logTools": false
+}
+```
+
 ### Lifecycle Hooks
 
 The plugin hooks into OpenCode's lifecycle to automatically capture knowledge:
