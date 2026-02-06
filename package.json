@@ -1,16 +1,23 @@
 {
-  "name": "opencode-in-memoria",
+  "name": "opencode-in-memoria-plugin",
   "version": "1.0.0",
   "description": "OpenCode plugin for In-Memoria persistent intelligence",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist/",
+    "config/",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
     "clean": "rm -rf dist",
     "lint": "eslint src/**/*.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "keywords": [
     "opencode",

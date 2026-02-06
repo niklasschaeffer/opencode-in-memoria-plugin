@@ -1,5 +1,9 @@
 # OpenCode In-Memoria Plugin
 
+[![CI](https://github.com/niklasschaeffer/opencode-in-memoria-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/niklasschaeffer/opencode-in-memoria-plugin/actions/workflows/ci.yml)
+[![NPM Version](https://img.shields.io/npm/v/opencode-in-memoria-plugin.svg)](https://www.npmjs.com/package/opencode-in-memoria-plugin)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Integrates [In-Memoria](https://github.com/pi22by7/In-Memoria) persistent intelligence into OpenCode.
 
 ## Installation
