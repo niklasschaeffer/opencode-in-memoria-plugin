@@ -32,6 +32,10 @@ declare class InMemoriaPlugin {
     onConversationEnd(context: ConversationContext): Promise<void>;
     onToolsList(context: ToolsListContext): Promise<ToolsListContext>;
 }
-export declare const plugin: InMemoriaPlugin;
-export default plugin;
+/**
+ * Factory function that creates and returns the plugin instance
+ * OpenCode calls this function to get the plugin
+ */
+export default function createPlugin(): InMemoriaPlugin;
+export declare const plugin: typeof createPlugin;
 //# sourceMappingURL=index.d.ts.map

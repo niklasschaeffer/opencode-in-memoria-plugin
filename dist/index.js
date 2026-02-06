@@ -203,6 +203,13 @@ class InMemoriaPlugin {
         return context;
     }
 }
-export const plugin = new InMemoriaPlugin();
-export default plugin;
+/**
+ * Factory function that creates and returns the plugin instance
+ * OpenCode calls this function to get the plugin
+ */
+export default function createPlugin() {
+    return new InMemoriaPlugin();
+}
+// Also export for named imports
+export const plugin = createPlugin;
 //# sourceMappingURL=index.js.map
