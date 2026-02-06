@@ -4,7 +4,30 @@
 [![NPM Version](https://img.shields.io/npm/v/opencode-in-memoria-plugin.svg)](https://www.npmjs.com/package/opencode-in-memoria-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Integrates [In-Memoria](https://github.com/pi22by7/In-Memoria) persistent intelligence into OpenCode.
+A persistent intelligence plugin for OpenCode that captures, learns, and applies codebase patterns across AI-assisted development sessions.
+
+## What This Plugin Does
+
+This plugin integrates with [In-Memoria](https://github.com/pi22by7/In-Memoria) to create an organizational memory system for your codebase. It:
+
+- **Automatically learns** your codebase patterns, conventions, and architecture when a project opens
+- **Captures insights** from successful tasks, code decisions, and bug fixes
+- **Provides contextual recommendations** based on your project's specific patterns
+- **Builds persistent intelligence** that improves AI responses over time
+
+### Lifecycle Hooks
+
+The plugin hooks into OpenCode's lifecycle to automatically capture knowledge:
+
+| Hook | What It Captures |
+|------|------------------|
+| `project.open` | Auto-learns codebase patterns and architecture |
+| `ai.response.before` | Injects project context and pattern recommendations |
+| `task.complete` | Records best practices and decisions from successful work |
+| `ai.error` | Captures bug patterns for future prevention |
+| `file.change` / `file.save` | Triggers incremental learning on code changes |
+| `conversation.end` | Summarizes session insights |
+| `tools.list` | Provides file suggestions based on task context |
 
 ## Installation
 
@@ -69,6 +92,20 @@ Check status:
 await opencode.execute("inmemoria_status")
 ```
 
+## How It Works
+
+1. **Pattern Learning**: The plugin analyzes your codebase structure, naming conventions, architectural patterns, and common code structures
+
+2. **Insight Capture**: As you work, it captures:
+   - Best practices from successful implementations
+   - Bug patterns and their fixes
+   - Code organization decisions
+   - Performance optimizations
+
+3. **Context Injection**: Before AI generates responses, the plugin injects relevant project context and pattern recommendations specific to your codebase
+
+4. **Persistent Memory**: All captured knowledge persists across sessions, building up an organizational memory that improves AI assistance quality over time
+
 ## Documentation
 
 - [Architecture](./docs/ARCHITECTURE.md)
@@ -78,9 +115,10 @@ await opencode.execute("inmemoria_status")
 ## Development
 
 ```bash
-npm run dev      # Watch mode
-npm run build    # Build once
-npm run test     # Run tests
+npm run dev       # Watch mode
+npm run build     # Build once
+npm run lint      # Run ESLint
+npm run typecheck # Type check
 ```
 
 ## License
