@@ -1,4 +1,7 @@
 /In-Memoria
 node_modules
+.idea
+
+# In Memoria
 in-memoria.db
-/in-memoria-vectors.db
+.in-memoria/cache/

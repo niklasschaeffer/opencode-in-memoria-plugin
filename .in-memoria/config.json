@@ -1,0 +1,43 @@
+{
+  "version": "0.6.0",
+  "project": {
+    "name": "opencode-plugin-in-memoria",
+    "languages": [
+      "javascript",
+      "typescript",
+      "rust",
+      "sql",
+      "php"
+    ]
+  },
+  "intelligence": {
+    "enableRealTimeAnalysis": true,
+    "enablePatternLearning": true,
+    "vectorEmbeddings": true
+  },
+  "watching": {
+    "patterns": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.rs"
+    ],
+    "ignored": [
+      "**/node_modules/**",
+      "**/.git/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/target/**"
+    ],
+    "debounceMs": 500
+  },
+  "mcp": {
+    "serverPort": 3000,
+    "enableAllTools": true
+  },
+  "setup": {
+    "createdAt": "2026-02-06T16:27:43.393Z",
+    "setupVersion": "interactive-v1"
+  }
+}
